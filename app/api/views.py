@@ -16,6 +16,16 @@ from .serializers import (
     PedidoSerializerGET
 )
 
+class IndexView(APIView):
+    
+    def get(self,request):
+        context = {
+            'status':True,
+            'content':'servidor activo'
+        }
+        
+        return Response(context)
+
 class MesaView(APIView):
     
     def get(self,request):
