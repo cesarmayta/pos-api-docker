@@ -102,7 +102,7 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'qwerty123',
         'HOST': 'mysql',
-        'PORT': '3307',
+        'PORT': '3306',
     }
 }
 
