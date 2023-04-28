@@ -7,5 +7,4 @@ python-decouple
 django-admin-tailwind
 django-admin-autocomplete-list-filter
 djangorestframework-simplejwt
-drf-yasg
 gunicorn

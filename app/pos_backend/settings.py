@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
+
 from pathlib import Path
 
 from decouple import config
@@ -49,7 +51,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'drf_yasg',
     'djaa_list_filter',
 ]
 
@@ -100,8 +101,8 @@ DATABASES = {
         'NAME': 'db_pos_backend',
         'USER': 'root',
         'PASSWORD': 'qwerty123',
-        'HOST': '172.28.1.5',
-        'PORT': '3306',
+        'HOST': 'mysql',
+        'PORT': '3307',
     }
 }
 
@@ -142,7 +143,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 

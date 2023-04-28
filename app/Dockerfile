@@ -15,8 +15,7 @@ RUN apk add --update --no-cache mariadb-connector-c-dev \
     && apk add libffi-dev openssl-dev libgcc
 
 RUN pip install --upgrade pip
-COPY ./requirements.txt .
-RUN pip install -r requirements
-
-
 COPY . .
+RUN pip install -r requirements.txt
+
+

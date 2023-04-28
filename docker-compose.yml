@@ -2,9 +2,9 @@ version: '3.3'
 
 services:
   web:
-    container_name: pos_backend.web
+    container_name: pos_backend.api
     build: ./app
-    command : gunicorn pos_backend.wsgi.application --bind 0.0.0.0:3762
+    command : gunicorn pos_backend.wsgi:application --bind 0.0.0.0:3762
     volumes:
       - ./app:/usr/src/app
       - ./app/static:/usr/src/app/static
@@ -27,7 +27,7 @@ services:
       MYSQL_ROOT_PASSWORD: 'qwerty123'
       MYSQL_DATABASE: 'db_pos_backend'
     ports:
-      - "3306:3306"
+      - "3307:3306"
     networks:
       local_network:
         ipv4_address: 172.28.1.5
